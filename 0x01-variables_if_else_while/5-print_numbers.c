@@ -11,7 +11,7 @@ int main(void)
 
 	while (k < 10)
 	{
-		printf("%d  ", k);
+		printf("%d", k);
 		k++;
 	}
 	printf("\n");
