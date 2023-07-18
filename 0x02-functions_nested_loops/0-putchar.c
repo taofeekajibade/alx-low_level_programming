@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - print _putchar, followed by new line.
+ * _putchar -  prints character '_putchar', followed by new line.
+ * @c - character to be printed.
  * Return: 0
  */
 
-int _putchar()
+int _putchar(void) /* a new function by programmer*/
 {
 	putchar('_');
 	putchar('p');
