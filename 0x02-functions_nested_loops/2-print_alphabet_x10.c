@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10: print alphabets 10x
+ * print_alphabet_x10 - print alphabets 10x and ends with a new line.
+ *
  * Return: Always 0;
  *
  */
@@ -19,6 +20,7 @@ void print_alphabet_x10(void)
 			_putchar(letter);
 			letter++;
 		}
-	}
 	_putchar('\n');
+
+	}
 }
