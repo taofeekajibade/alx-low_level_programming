@@ -1,23 +1,22 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _putchar -  prints character '_putchar', followed by new line.
+ * main -  prints character '_putchar', followed by new line.
  * @c - character to be printed.
  * Return: 0
  */
 
-int _putchar(void) /* a new function by programmer*/
+int main(void) /* a new function by programmer*/
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
