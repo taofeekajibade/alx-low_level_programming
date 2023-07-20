@@ -2,7 +2,7 @@
 
 /**
  * print_sign - this code prints the ign of a number
- * n - this represents the number to be checked
+ * @n: this represents the number to be checked
  * Return: Always 0;
  * Returm: 1 for positive number, -1 for negative number and zero for others
  */
