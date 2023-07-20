@@ -15,6 +15,7 @@ void print_remaining_days(int month, int day, int year)
 	int total_days = 365;
 	int day_of_year = 0;
 	int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	int i = 0;
 
 	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
 	{
@@ -35,10 +36,11 @@ void print_remaining_days(int month, int day, int year)
 	{
 		days_in_month[1] = 29; /* February has 29 days in a leap year */
 	}
-	
-	for (int i = 0; i < month - 1; i++)
+
+	while (i < month - 1)
 	{
 		day_of_year += days_in_month[i];
+		i++;
 	}
 	day_of_year += day;
 	printf("Day of the year: %d\n", day_of_year);
