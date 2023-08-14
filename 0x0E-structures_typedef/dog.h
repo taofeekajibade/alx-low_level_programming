@@ -1,18 +1,22 @@
 #ifndef DOG_H
 #define DOG_H
-
 /**
- * @struct dog represents the structure of a dog
+ * typedef strict dog - a new function definition for dog
+ */
+typedef struct dog dog_t;
+/**
+ * struct dog - represents the structure of a dog
  * @name: 1st element
  * @age: 2nd element
  * @owner: 3rd element
  */
-typedef struct dog dog_t
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}dog_t;
+
+};
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
