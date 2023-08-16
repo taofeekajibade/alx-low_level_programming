@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
 
@@ -19,11 +20,11 @@ int (*get_op_func(char *s))(int a, int b)
 	};
 	int i = 0;
 
-	while (ops[i].op != NULL)
-	{
+	while (i < 5)
 		if (*s == *ops[i].op)
 			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
+
 }
