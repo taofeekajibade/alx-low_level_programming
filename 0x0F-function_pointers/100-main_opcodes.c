@@ -3,8 +3,7 @@
 
 /**
  * main - program that prints the opcodes.
- *
- * @argc: 	args count
+ * @argc: args count
  * @argv: array of args
  * Return: int
  */

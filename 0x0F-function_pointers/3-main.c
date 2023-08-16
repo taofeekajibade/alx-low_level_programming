@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * main - function that calculaye operations given two integers and an operator.
+ * main - calculates operations given two integers and an operator.
  * It prints sum, difference, product, dividend, or remainder
  * @argc: argument counter
  * @argv: arguments
@@ -41,4 +41,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 
-}	
+}
