@@ -1,6 +1,7 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "3-calc.h"
+#include <string.h>
 
 /**
  * main - calculates operations given two integers and an operator.
@@ -9,36 +10,46 @@
  * @argv: arguments
  * Return: Always 0 (success)
  */
-
 int main(int argc, char *argv[])
 {
-	int n1, n2;
-	int (*f)(int, int);
+        char *sign;
+        char operator;
+        int a, b, answer;
+        int (*ptr)(int, int);
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+        if (argc != 4)
+        {
+                printf("Error\n");
+                exit(98);
+        }
 
-	/* convert user input to ints and point to correct operator function */
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[3]);
-	f = get_op_func(argv[2]);
+        operator = argv[2][0];
+        if ((operator != '*' && operator != '+' && operator != '-' &&
+             operator != '/' && operator != '%') || argv[2][1] != '\0')
+        {
+                printf("Error\n");
+                exit(99);
+        }
 
-	if (f == NULL || (argv[2][1] != '\0'))
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
-	{
-		printf("Error\n");
-		exit(100);
-	}
+        a = atoi(argv[1]);
+        b = atoi(argv[3]);
+        if ((operator == '/' || operator == '%') && b == 0)
+        {
+                printf("Error\n");
+                exit(100);
+        }
 
-	printf("%d\n", f(n1, n2));
+        sign = argv[2];
+        ptr = get_op_func(sign);
+        if (!ptr)
+        {
+                printf("Error\n");
+                exit(99);
+        }
 
-	return (0);
+        answer = (*ptr)(a, b);
+        printf("%d\n", answer);
+
+        return (0);
 
 }
