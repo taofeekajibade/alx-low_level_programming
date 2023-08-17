@@ -12,4 +12,4 @@
 3. Write a program that performs simple operations. **Usage:** `calc num1 operator num2`
 4. Write a program that prints the opcodes of its own main function. **Usage:** `./main number_of_bytes`  
 
-| [Twitter: @taofeekajibade](https://www.twitter.com/taofeekajibade) 
+| [Twitter: @taofeekajibade](https://www.twitter.com/taofeekajibade) |
