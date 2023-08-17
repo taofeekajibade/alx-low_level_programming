@@ -1,15 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-/**
- * main - calculates operations given two integers and an operator.
- * It prints sum, difference, product, dividend, or remainder
- * @argc: argument counter
- * @argv: arguments
- * Return: Always 0 (success)
- */
 int main(int argc, char *argv[])
 {
         char *sign;
@@ -20,7 +12,7 @@ int main(int argc, char *argv[])
         if (argc != 4)
         {
                 printf("Error\n");
-                exit(98);
+                return 98;
         }
 
         operator = argv[2][0];
@@ -28,7 +20,7 @@ int main(int argc, char *argv[])
              operator != '/' && operator != '%') || argv[2][1] != '\0')
         {
                 printf("Error\n");
-                exit(99);
+                return 99;
         }
 
         a = atoi(argv[1]);
@@ -36,7 +28,7 @@ int main(int argc, char *argv[])
         if ((operator == '/' || operator == '%') && b == 0)
         {
                 printf("Error\n");
-                exit(100);
+                return 100;
         }
 
         sign = argv[2];
@@ -44,12 +36,13 @@ int main(int argc, char *argv[])
         if (!ptr)
         {
                 printf("Error\n");
-                exit(99);
+                return 99;
         }
 
         answer = (*ptr)(a, b);
         printf("%d\n", answer);
 
-        return (0);
+	        return 0;
 
 }
+
