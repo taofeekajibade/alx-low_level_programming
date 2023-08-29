@@ -3,9 +3,9 @@
 /**
  * print_listint - prints all elements of a listint_t list
  * @h: pointer to node
+ *
  * Return: total number of elements
  */
-
 size_t print_listint(const listint_t *h)
 {
 	size_t total = 0;
@@ -17,7 +17,7 @@ size_t print_listint(const listint_t *h)
 		total++;
 		current = current->next;
 	}
-	print("\n");
+	printf("\n");
 	return (total);
 }
 
