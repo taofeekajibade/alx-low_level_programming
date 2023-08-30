@@ -5,24 +5,25 @@
  *
  * Return: number of nodes
  */
-
 size_t free_listint_safe(listint_t **h)
 {
-	size_t count = 0;
+	size_t node_count = 0;
 	listint_t *current = *h;
-	listint_t *next;
+	listint_t *temp;
 
-	if (h == NULL || *h == NULL)
-	{
-		return (0);
-	}
 	while (current != NULL)
 	{
-		next = current->next;
-		free(current);
-		current = next;
-		count++;
+		node_count++;
+		temp = current;
+		current = current->next;
+
+		if (temp <= current)
+		{
+			*h = NULL;
+			return (node_count);
+		}
+		free(temp);
 	}
 	*h = NULL;
-	return (count);
+	return (node_count);
 }
