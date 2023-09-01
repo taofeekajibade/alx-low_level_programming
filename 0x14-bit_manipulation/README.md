@@ -11,7 +11,7 @@ Bit manipulation is a technique in programming where you manipulate individual b
 + `<<`	-	Left shift
 + `>>`	-	Right shift
 ![bitwise
-operation](taofeekajibade/alx-low_level_programming/0x14-bit_manipulation/bitwise.png)
+operation](0x14-bit_manipulation/bitwise.png)
 ## Tasks:
 0. Write a function that converts a binary number to an unsigned int.
 1. Write a function that prints the binary representation of a number.
