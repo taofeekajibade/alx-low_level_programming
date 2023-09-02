@@ -13,19 +13,8 @@
  */
 int get_endianness(void)
 {
-	int num = 1;
+	int num = 0x00000001;
 	char *byte_order = (char *)&num;
 
-	if (byte_order == NULL)
-	{
-		return (-1);
-	}
-	if (*byte_order == 1)
-	{
-		return (0);
-	}
-	else
-	{
-		return (1);
-	}
+	return (byte_order[0]);
 }
