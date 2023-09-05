@@ -1,6 +1,6 @@
 # 0x15. C - File I/O
 
-# Tasks:
+## Tasks:
 
 0. Write a function that reads a text file and prints it to the POSIX standard output.
 
@@ -13,5 +13,5 @@
 4. Write a program that displays the information contained in the ELF header at the
 start of an ELF file.
 
-> **Author:**
-> **Twitter:** [@taofeekajibade](twitter.com/taofeekajibade)
+### Author:
+> Twitter:[@taofeekajibade](https://www.twitter.com/taofeekajibade)
