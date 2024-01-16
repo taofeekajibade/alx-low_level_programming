@@ -37,18 +37,18 @@ void array_null_init(hash_table_t *table)
  * shash_table_delete - Deletes a sorted hash table.
  * @ht: A pointer to the sorted hash table.
  */
-void shash_table_delete(shash_table_t *ht)
+void shash_table_delete(hash_table_t *ht)
 {
-	shash_table_t *head = ht;
-	shash_node_t *node, *tmp;
+	hash_table_t *head = ht;
+	hash_node_t *node, *tmp;
 
 	if (ht == NULL)
 		return;
 
-	node = ht->shead;
+	node = ht->head;
 	while (node)
 	{
-		tmp = node->snext;
+		tmp = node->next;
 		free(node->key);
 		free(node->value);
 		free(node);
